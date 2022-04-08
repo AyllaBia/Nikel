@@ -12,3 +12,26 @@
     position: absolute;
     bottom: 100px;
 }
+
+.button-login {
+    border-radius: 10px;
+    background-color: #4e0070;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.button-login:hover {
+    background-color: #4c79d3;
+    color: #ffffff;
+}
+
+.link-default {
+    color: #4e0070;
+    cursor: pointer;
+}
+
+.link-default:hover {
+    color: #4c79d3;
+}
+
