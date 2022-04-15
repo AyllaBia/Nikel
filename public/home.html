@@ -13,20 +13,20 @@
 
     <title>Nikel - Home</title>
 </head>
+
 <body id="app">
-    <main>
-        <header>
-            <nav class="navbar navbar-expand navbar-light bg-white">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">
-                      <img src="./images/nikel-small-logo.png" alt="logo nikel" class="img-fluid">
-                  </a>
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/nikel-small-logo.png" alt="logo nikel" class="img-fluid">
+                </a>
 
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                  </button>
+                </button>
 
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <div class="d-flex">
                         <a href="home.html"><button class="btn" type="button"><i class="bi bi-house-door-fill fs-4 color-secundary"></i></button></a>
                         <a href="home.html"><button class="btn" type="button"><i class="bi bi-currency-exchange fs-4"></i></button></a>
@@ -35,26 +35,82 @@
                             <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-person-circle fs-4"></i>
                             </button>
+
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" href="#">Sair</a></li>
+                                <li><a class="dropdown-item" href="#">Sair</a></li>
                             </ul>
                         </div>
                     </div>
-                  </div>
                 </div>
-              </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
+    <main>
         <div class="container-lg">
             <div class="row">
-                <div class="col">
+                <div class="col d-flex mt-4 justify-content-start align-items-center">
                     <i class="bi bi-cash-coin color-primary icon-detail"></i>
                     <span class="fs-2">R$ 0,00</span>
                 </div>
-                
-                <div class="col">
-                    <div>
+                            
+                <div class="col d-flex mt-4 justify-content-end">
+                    <div class="text-center">
                         <img src="./images/coins-small.png" alt="image coins">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 info shadow-lg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="fs-4">
+                                    Entradas <i class="bi bi-arrow-down-circle fs-2 align-middle"></i>
+                                </span>
+                            </div>
+                    
+                            <div class="col-6">
+                                 <span class="fs-4">
+                                    Saídas <i class="bi bi-arrow-up-circle fs-2 align-middle"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-12 my-2">
+                                <hr>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            R$ 1000.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="container">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                R$ 500.00
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="button" class="btn button-default">
+                                    Ver todas
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
