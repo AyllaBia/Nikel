@@ -1,5 +1,9 @@
 // Coletanto informações do formulário de registro de usuário
 const myModal = new bootstrap.Modal("#register-modal");
+let logged = sessionStorage.getItem("logged");
+const session = localStorage.getItem("session");
+
+checkLogged();
 
 //Logar no Sistema
 document.getElementById("form-login").addEventListener("submit", function(e) {
@@ -8,7 +12,7 @@ document.getElementById("form-login").addEventListener("submit", function(e) {
     // Criar constantes e inserir os valores digitados pelo usuário
     const email = document.getElementById("email-input").value;
     const password = document.getElementById("password-input").value;
-    const session = document.getElementById("session-check").checked;
+    const checkSession = document.getElementById("session-check").checked;
     const account = getAccount(email);
 
     // Verifica se o login digitado está correto
@@ -23,6 +27,9 @@ document.getElementById("form-login").addEventListener("submit", function(e) {
             alert("Opps! Verifique o usuário ou a senha.");
             return;
         }
+
+        // Chama a função para verificar se o usuário ativou a opção de permanecer logado
+        saveSession(email, checkSession);
 
         // Direciona o usuário para tela home
         window.location.href = "home.html";
@@ -60,10 +67,34 @@ document.getElementById("create-form").addEventListener("submit", function(e) {
     alert("Conta criada com sucesso!");
 })
 
+// Função para checar o login do usuário caso ele escolha permanecer logado
+function checkLogged() {
+    if (session) {
+        sessionStorage.setItem("logged", session);
+
+        logged = session;
+    }
+
+    if (logged) {
+        saveSession(logged, session);
+
+        window.location.href = "home.html";
+    }
+}
+
 // Criação da função que vai armazenar os usuários criados no localStorage
 function saveAccount(data) {
     // Converte o que for digitado para uma String e armazena
     localStorage.setItem(data.login, JSON.stringify(data))
+}
+
+// Função para salvar a opção de permanecer logado se o usuário quiser.
+function saveSession(data, saveSession) {
+    if (saveSession) {
+        localStorage.setItem("session", data);
+    }
+
+    sessionStorage.setItem("logged", data);
 }
 
 // Criação da função que vai buscar os usuários armazenados no localStorage
