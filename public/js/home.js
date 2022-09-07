@@ -7,6 +7,9 @@ let data = {
 };
 
 document.getElementById("button-logout").addEventListener("click", logout);
+document.getElementById("transactions-button").addEventListener("click", function() {
+    window.location.href = "transactions.html"
+});
 
 // Adicionar Lançamento
 document.getElementById("transaction-form").addEventListener("submit", function(e) {
