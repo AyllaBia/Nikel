@@ -50,7 +50,7 @@
                 <!-- Icone de dinheiro e valor total em R$ no canto esquerdo-->
                 <div class="col d-flex mt-4 justify-content-start align-items-center">
                     <i class="bi bi-cash-coin color-primary icon-detail"></i>
-                    <span class="fs-2">R$ 0,00</span>
+                    <span class="fs-2" id="total">R$ 0,00</span>
                 </div>
                           
                 <!-- Icone das moedas no canto direito -->
@@ -86,29 +86,19 @@
                         <div class="row">
                             <!-- Valores de entrada -->
                             <div class="col-6">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            R$ 1000.00
-                                        </div>
-                                    </div>
+                                <div class="container p-0" id="cash-in-list">
+                                    
                                 </div>
                             </div>
 
                             <!-- Valores de saída -->
                             <div class="col-6">
-                                <div class="container">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col">
-                                                R$ 500.00
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="container p-0" id="cash-out-list">
+                                    
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-12 mb-4">
                                 <!-- Botão de ver todas as outras transações -->
                                 <button type="button" class="btn button-default">
                                     Ver todas
